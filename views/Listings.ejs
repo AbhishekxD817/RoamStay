@@ -1,0 +1,36 @@
+<%- include('./includes/head.ejs',{doc_title:'Home',styles:'styles/styles.css'}) %>
+
+    <body>
+        <%- include('./includes/header.ejs') %>
+        <%- include('./includes/flashMessage.ejs') %>
+        
+            <div class="div-all-listings-heading">
+                <h3 class="h3-all-listings">All Listings</h3>
+            </div>
+
+            <div class="list-items-container">
+                    <% for ( let i=listings.length - 1 ; i>= 0 ; i--) { %>
+                        <div class="list-item">
+                            <a href="/listings/<%= listings[i]._id %>">
+                                <h6 style="text-align: right;color: rgba(0, 0, 0, 0.397); font-size: 12px;">Owned By :- @<%= listings[i].owner.username %></h6>
+
+                                <img src="<%=  listings[i].image.url %>" alt="image">
+                                <h3>
+                                    <%= listings[i].title %>
+                                </h3>
+                                <span>Location: <%= listings[i].location %>, <%= listings[i].country %></span>
+                                <p>
+                                    <%= listings[i].description %>
+                                </p>
+                                <span class="price">Price: &#8377 <%= listings[i].price.toLocaleString('en-IN') %></span>
+                                <br>
+
+                            </a>
+                        </div>
+                    <% } %>
+            </div>
+
+            <%- include('./includes/footer.ejs') %>
+    </body>
+
+    </html>

@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Segoe Script', cursive, sans-serif;
+    color: #FF385C;
+    padding: 0;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+header .logo:hover {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 56, 92, 0.5);
+}
+
+header .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+header .navbar-toggler .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+header .menu-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+header .navbar-toggler[aria-expanded="true"] .menu-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+header .navbar-toggler[aria-expanded="true"] .menu-line:nth-child(2) {
+    transform: scaleX(0);
+}
+
+header .navbar-toggler[aria-expanded="true"] .menu-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+header .navbar-toggler[aria-expanded="true"] .menu-line {
+    opacity: 1;
+}
+
+
+
+header .navbar-nav .nav-link {
+    color: #fff;
+    padding: 5px 10px;
+
+}
+
+header .navbar-nav .nav-link:hover {
+    background-color: #555;
+}
+
+
+/* Custom styles for large screens */
+@media (min-width: 992px) {
+    .navbar-brand {
+        margin-right: auto; /* Pushes the navbar to the right */
+    }
+    .navbar-nav {
+        margin-left: auto; /* Pushes the navbar to the right */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.intro-home {
+    text-align: center; /* Center align text */
+    max-width: 600px; /* Set maximum width for the content */
+    padding: 20px;
+}
+
+.intro-home h1 {
+    font-size: 80px; /* Font size for the logo */
+    font-weight: bolder; /* Font weight for the logo */
+    margin-bottom: 10px; /* Margin below the logo */
+    color: #FF385C; /* Initial color for the h1 */
+    padding: 0 10px;
+    display: inline-block;
+    font-family: 'Segoe Script', cursive, sans-serif; /* Cursive font family */
+    animation: colorAnimation 3s infinite alternate; /* Animation for color change */
+}
+
+@keyframes colorAnimation {
+    0% {
+        color: #FF385C;
+        text-shadow: 0 0 5px #FF385C; /* Initial text shadow */
+    }
+    100% {
+        color: #000000; /* Final color */
+        text-shadow: 0 0 10px #FF385C; /* Final text shadow */
+    }
+}
+
+
+
+.intro-home p {
+    font-size: 18px; /* Font size for the paragraph */
+    line-height: 1.5; /* Line height for readability */
+}
+
+.intro-home .highlight {
+    color: #FF385C; /* Highlight color */
+    font-weight: bold; /* Highlight font weight */
+}
+
+.intro-home a {
+    display: inline-block; /* Display as block to style as button */
+    background-color: #FF385C; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding inside button */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Margin on top */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.intro-home a:hover {
+    background-color: #E6294B; /* Darker background color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-container {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;/* Center aligns the form horizontally */ /* Center aligns the form vertically */
+  }
+  
+  .form-heading{
+    /* background-color: red; */
+    border-bottom: 1px solid black;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .form-container form {
+    
+    max-width: 400px ;
+    min-width: 250px;
+    width: 300px; /* Adjust the maximum width of the form as needed */
+    padding: 20px; /* Add padding inside the form */
+    border: 1px solid #ccc; /* Add a border around the form */
+    border-radius: 5px; /* Rounded corners for the form */
+    background-color: #f9f9f9; /* Light gray background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+  }
+  
+  .form-container form input[type="text"],
+  .form-container form input[type="email"],
+  .form-container form input[type="password"],
+  .form-container form textarea,
+  .form-container form input[type="number"] {
+    width: 100%; /* Makes inputs and textarea full width */
+    padding: 10px; /* Adds padding inside inputs and textarea */
+    margin-bottom: 10px; /* Adds space between inputs */
+    border: 1px solid #ccc; /* Adds a border around inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+  }
+  
+  .form-container form input[type="number"] {
+    /* Webkit (Chrome, Safari, Opera) */
+    -webkit-appearance: textfield;
+    /* Firefox */
+    -moz-appearance: textfield;
+    /* Edge */
+    appearance: textfield;
+  }
+  
+  .form-container form textarea {
+    resize: none;/* Allows vertical resizing of textarea */
+  }
+  
+  .form-container form button {
+    display: block; /* Makes the button a block element */
+    width: 100%; /* Makes the button full width */
+    padding: 10px; /* Adds padding inside the button */
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none; /* Removes default button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  
+    /* Optional: Add additional styles for hover and focus */
+  }
+  
+  .form-container form button:hover,
+  .form-container form button:focus {
+    background-color: #0056b3; /* Darker blue on hover/focus */
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* listings */
+
+.div-all-listings-heading{
+    display: flex;
+    justify-content: center;
+} 
+.h3-all-listings{
+    font-size: 30px;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    display: inline-block;
+  }
+  
+.list-items-container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+textarea{
+    resize:none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.list-item {
+    width: calc(25% - 20px); /* Adjust for 3 items per row with gap */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.list-item a {
+    display: block;
+    height: 100%; /* Make the anchor fill the entire .list-item */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+@media (max-width: 1200px) {
+    .list-item {
+        width: calc(33.33% - 20px); /* Adjust for 2 items per row with gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .list-item {
+        width: calc(50% - 20px); /* Adjust for 2 items per row with gap */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .list-item {
+        width: 100%; /* Adjust for 1 item per row with full width */
+    }
+}
+
+
+
+
+.list-item img {
+    width: 100%; /* Ensures image takes full width of list-item */
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images maintain aspect ratio and cover the container */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.list-item h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit number of lines to 2 */
+    -webkit-box-orient: vertical;
+}
+
+.list-item span {
+    display: block;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.list-item p {
+    color: #333;
+    margin-bottom: 15px;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit number of lines to 3 */
+    -webkit-box-orient: vertical;
+}
+
+
+.price {
+    font-weight: bold;
+    color: #FF385C !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.show-listing-container{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+}
+.show-listing-container .list-item{
+    width: 400px;
+    min-width: 300px;
+    height: fit-content;
+    margin: 20px auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    /* Adjust the gap between buttons */
+  }
+  
+  .edit-btn, .delete-btn {
+    display: inline-block;
+    width: 120px; /* Adjust button width as needed */
+    height: 40px; /* Adjust button height as needed */
+    text-align: center;
+    line-height: 40px; /* Center text vertically */
+    text-decoration: none; /* Remove underline from links */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size as needed */
+  
+    /* Common button styles */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  
+    /* Specific button styles */
+    &.edit-btn {
+      background-color: black; /* Pink color for edit button */
+      color: #fff;
+    }
+  
+    &.delete-btn {
+      background-color: red; /* Red color for delete button */
+      color: #fff;
+    }
+  }
+  
+  .edit-btn:hover, .edit-btn:focus{
+    background-color: rgba(0, 0, 0, 0.884); /* Darker pink/red on hover/focus */
+  }
+  .delete-btn:hover, .delete-btn:focus {
+    background-color: rgba(255, 0, 0, 0.884); /* Darker pink/red on hover/focus */
+  }
+  
+  .edit-btn:active, .delete-btn:active {
+    transform: translateY(1px); /* Push button down slightly when active */
+  }
+  
+
+
+

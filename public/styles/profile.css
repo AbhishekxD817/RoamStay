@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+       body{
+        background-color:#545454;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+       }
+
+       .container{
+        height: 75vh;
+       }
+
+       .card{
+
+        width: 380px;
+        border: none;
+        border-radius: 15px;
+        padding: 8px;
+        background-color: #fff;
+        position: relative;
+        height: 370px;
+       }
+
+       .upper{
+
+        height: 100px;
+
+       }
+
+       .upper img{
+
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+       }
+
+       .user{
+        position: relative;
+       }
+
+       .profile img{
+
+        
+        height: 80px;
+        width: 80px;
+        margin-top:2px;
+
+       
+       }
+
+       .profile{
+
+        position: absolute;
+        top:-50px;
+        left: 38%;
+        height: 90px;
+        width: 90px;
+        border:3px solid #fff;
+
+        border-radius: 50%;
+
+       }
+
+       .follow{
+
+        border-radius: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 35px;
+       }
+
+       .stats span{
+
+        font-size: 29px;
+       }
+
+
+
+
+
+
+
+       .activity-container {
+        max-width: 1000px; /* Adjust max-width as needed */
+        margin: 0 auto;
+        margin-bottom: 10px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+    }
+    
+    .activity-container h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .my-posts-and-reviews-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next line */
+    }
+    
+    .my-posts-container, .my-reviews-container {
+        flex: 1; /* Equal width for both containers */
+        padding: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .my-posts-and-reviews-container {
+            flex-direction: column; /* Stack containers vertically on smaller screens */
+        }
+    }
+    
+
+
+
+
+    .my-posts-and-reviews-container .container{
+        height: fit-content !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    body{margin-top:20px;
+        background:#eee;
+        }
+        .card {
+            box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+        }
+        .avatar.sm {
+            width: 2.25rem;
+            height: 2.25rem;
+            font-size: .818125rem;
+        }
+        .table-nowrap .table td, .table-nowrap .table th {
+            white-space: nowrap;
+        }
+        .table>:not(caption)>*>* {
+            padding: 0.75rem 1.25rem;
+            border-bottom-width: 1px;
+        }
+        table th {
+            font-weight: 600;
+            background-color: #eeecfd !important;
+        }

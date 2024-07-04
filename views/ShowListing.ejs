@@ -1,0 +1,43 @@
+
+<%- include('./includes/head.ejs',{doc_title:'Home',styles:'/styles/styles.css'}) %>
+
+    <body>
+        <%- include('./includes/header.ejs') %>
+        <%- include('./includes/flashMessage.ejs') %>
+
+        <div class="show-listing-container">
+            <div class="list-item">
+                <h3>
+                    <%= listing.title %>
+                </h3>
+                <h6 style="color: rgba(0, 0, 0, 0.397); font-size: 10px;">Owned By :- @<%= listing.owner.username %></h6>
+
+                <img src="<%=  listing.image.url %>" alt="image">
+                    <span>Location: <%= listing.location %>, <%= listing.country %></span>
+                    <p>
+                        <%= listing.description %>
+                    </p>
+                    <span class="price">Price: &#8377; <%= listing.price.toLocaleString('en-IN') %></span>
+                    <br>
+                    <% if(currentUser && currentUser._id.equals(listing.owner._id)) { %>
+                    <div class="buttons-container">
+                        <a href="/listings/<%= listing._id %>/edit" class="edit-btn">Edit Item</a>
+                        <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
+                            <button class="delete-btn">Delete Item</button>
+                        </form>
+                    </div>
+                    <% } %>
+            </div>
+
+            <% if(currentUser) { %>
+            <%- include('./includes/AddReviewsForm.ejs',{listingId: listing._id}) %>
+            <% } %>
+
+            <%- include('./includes/reviews.ejs',{reviews,listingId: listing._id}) %>
+
+
+        </div>
+
+        <%- include('./includes/footer.ejs') %>
+    </body>
+</html>

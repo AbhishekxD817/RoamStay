@@ -1,0 +1,43 @@
+<%- include('./includes/head.ejs',{doc_title:'Add New Listing',styles:'/styles/styles.css'}) %>
+
+<body>
+    <%- include('./includes/header.ejs') %>
+    <%- include('./includes/flashMessage.ejs') %>
+
+    <div class="form-container">
+        <div class="form-heading">
+            <h3>Add New Listing</h3>
+        </div>
+
+        <form action="/listings/<%= listing._id %>?_method=PATCH" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+            <label for="validationCustom01" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" value="<%= listing.title %>" placeholder="title" id="validationCustom01" required>
+
+            <label for="validationCustom02" class="form-label">Description</label>
+            <textarea name="description" class="form-control" id="validationCustom02" cols="30" rows="5" required><%= listing.description %></textarea>
+
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Image</label>
+                <input class="form-control" type="file" id="formFile" name="image">
+              </div>
+
+            <label for="validationCustom04" class="form-label">Location</label>
+            <input type="text" class="form-control" name="location" placeholder="location" id="validationCustom04" value="<%= listing.location %>" required>
+
+            <label for="validationCustom05" class="form-label">Country</label>
+            <input type="text" class="form-control" name="country" placeholder="country" id="validationCustom05" value="<%= listing.country %>" required>
+
+            <label for="validationCustom06" class="form-label">Price</label>
+            <input type="number" class="form-control" name="price" placeholder="price" id="validationCustom06" value="<%= listing.price %>" required>
+
+
+            <button type="submit">Post</button>
+        </form>
+    </div>
+
+
+
+    <%- include('./includes/footer.ejs') %>
+</body>
+</html>

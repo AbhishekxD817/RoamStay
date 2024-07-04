@@ -1,0 +1,31 @@
+<%- include('./includes/head.ejs',{doc_title:'Home',styles:'/styles/styles.css'}) %>
+
+    <body>
+        <%- include('./includes/header.ejs') %>
+        <%- include('./includes/flashMessage.ejs') %>
+        
+            <center class="mt-3">
+                <h2 class="mt-2 pb-2" style="border-bottom: 1px solid black; display: inline-block;">Login Form</h2>
+            </center>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 form-container">
+                        <form action="/users/login" method="post" novalidate class="needs-validation">
+                            <div class="form-group mt-2">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control mt-2" id="email" name="email" required>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="password">Password</label>
+                                <input type="password" class="mt-2 form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('./includes/footer.ejs') %>
+    </body>
+
+    </html>

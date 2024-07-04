@@ -1,0 +1,23 @@
+<hr>
+<div class="container mt-4 review-form">
+    <div class="row review-form-row">
+        <div class="col-md-6 offset-md-3 review-form-col">
+            <h2 class="mb-3">Leave a Review</h2>
+
+
+            <form action="/listings/<%= listingId %>/reviews" method="POST" novalidate class="needs-validation">
+                <div class="form-group">
+                    <label for="comment">Your Comment</label>
+                    <textarea class="form-control mt-2" id="comment" name="comment" rows="3" required></textarea>
+                </div>
+                <div class="form-group mt-4" >
+                    <label for="rating">Rating (out of 5 stars)</label>
+                    <input type="number" class="form-control mt-2" id="rating" name="rating" required>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+<hr>

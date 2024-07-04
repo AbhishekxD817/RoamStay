@@ -1,0 +1,56 @@
+<div class="reviews-containerBox">
+    <section style="background-color: #f7f6f6;">
+        <div class="container my-2 py-2 text-body">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-12 col-lg-10 col-xl-8">
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="text-body mb-0">Reviews</h4>
+              </div>
+    <% for (let i = (reviews.length - 1); i >= 0; i--) { %>
+
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="d-flex flex-start">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="/assets/Sample_User_Icon.png" alt="avatar" width="40"
+                          height="40" />
+                        <div class="w-100">
+                          <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="text-primary fw-bold mb-0">
+                              @<%= reviews[i].author.username %>
+                              <span class="text-body ms-2"><%= reviews[i].comment %></span>
+                            </h6>
+                            <div class="d-flex flex-row">
+                                <i class="far fa-check-circle" style="color: #aaa;"><%= reviews[i].rating %></i>
+                                <i class="fas fa-star text-warning me-2"> &#9733;</i>
+                              </div>
+                          </div>
+                          <div class="d-flex align-items-center" >
+                              <p class="small mb-0" style="color: #aaa;">                             
+                                  <form action="/listings/<%= listingId %>/reviews/<%= reviews[i]._id %>?_method=DELETE" method="post" style='width: 100%;' class="d-flex align-items-center justify-content-between">
+                                      <p class="mb-2 mx-1" style="font-size: 10px;"><%= reviews[i].createdAt.toLocaleString('en-IN').slice(0,8) %></p>
+
+                                        <% if(currentUser && currentUser._id.equals(reviews[i].author._id)) { %>
+                                             <button class="link-grey btn btn-danger" style="font-size: 10px;">Delete</button>
+                                        <% } %>
+                                </form>
+                                <p class="small mb-0" ></p>
+                            </p>
+
+                          </div>
+
+                          
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+

@@ -1,0 +1,12 @@
+<%- include('./includes/head.ejs',{doc_title:'Error',styles:'/styles/styles.css'}) %>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <center>
+        <div class="alert alert-danger" role="alert" style="width:50%;margin: 10px 0 0 0;">
+            <%= message %>
+          </div>   
+    </center>  
+
+    <%- include('./includes/footer.ejs') %>
+</body>
+</html>
