@@ -1,4 +1,4 @@
-<%- include('./includes/head.ejs',{doc_title:'Add New Listing',styles:'/styles/styles.css'}) %>
+<%- include('./includes/head.ejs',{doc_title:'Edit Listing',styles:'/styles/styles.css'}) %>
 
 <body>
     <%- include('./includes/header.ejs') %>
@@ -6,7 +6,7 @@
 
     <div class="form-container">
         <div class="form-heading">
-            <h3>Add New Listing</h3>
+            <h3>Edit Listing</h3>
         </div>
 
         <form action="/listings/<%= listing._id %>?_method=PATCH" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
@@ -32,7 +32,7 @@
             <input type="number" class="form-control" name="price" placeholder="price" id="validationCustom06" value="<%= listing.price %>" required>
 
 
-            <button type="submit">Post</button>
+            <button type="submit">Update</button>
         </form>
     </div>
 
